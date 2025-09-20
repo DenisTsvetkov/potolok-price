@@ -171,26 +171,6 @@
       }
     ]
   },
-  "769": {
-    "hierarchicalId": 769,
-    "name": "Гарпун",
-    "goods": [
-      {
-        "id": 8,
-        "name": "Гарпун",
-        "cost": 12,
-        "unit": "м",
-        "image": "./images/8.jpg"
-      },
-      {
-        "id": 10,
-        "name": "Гарпун сдвоенный",
-        "cost": 29,
-        "unit": "м",
-        "image": "./images/10.jpg"
-      }
-    ]
-  },
   "770": {
     "hierarchicalId": 770,
     "name": "Кронштейны",
@@ -784,6 +764,20 @@
     "hierarchicalId": 776,
     "name": "Расходники",
     "goods": [
+      {
+        "id": 8,
+        "name": "Гарпун",
+        "cost": 12,
+        "unit": "м",
+        "image": "./images/8.jpg"
+      },
+      {
+        "id": 10,
+        "name": "Гарпун сдвоенный",
+        "cost": 29,
+        "unit": "м",
+        "image": "./images/10.jpg"
+      },
       {
         "id": 58,
         "name": "Клей Космофен",

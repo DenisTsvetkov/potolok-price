@@ -4,7 +4,8 @@ const url = 'https://online.sbis.ru/oauth/service/';
 
 const app_client_id = '4039125485564887';
 const app_secret = 'UFEA51TUJLT6QQ8D8MDIQDEN';
-const secret_key = '0C0VliyzZxZLxmIjJsnrbya8gxFyhXqnasqqI2mC5TvEHCbBtQwesZ6DwsQeHnnbqGoMTXviy80w7wOVWElkFuphRQqphon7oHMY2BiUKEt6jdATtskfVN'
+const secret_key = '0C0VliyzZxZLxmIjJsnrbya8gxFyhXqnasqqI2mC5TvEHCbBtQwesZ6DwsQeHnnbqGoMTXviy80w7wOVWElkFuphRQqphon7oHMY2BiUKEt6jdATtskfVN';
+const actual_date = '20.09.2035';
 
 const downloadPrice = async () => {
     console.info("Подключаемся к серверу СБИС")
@@ -49,7 +50,7 @@ const downloadPrice = async () => {
     // Получаем прайс-лист
     const priceListParams = new URLSearchParams({
         pointId,
-        actualDate: '28.02.2025',
+        actualDate: actual_date,
     })
 
     const priceListResult = await fetch('https://api.sbis.ru/retail/nomenclature/price-list?' + priceListParams, {
@@ -61,7 +62,7 @@ const downloadPrice = async () => {
 
     const priceLists = await priceListResult.json();
 
-    const priceListId = priceLists?.priceLists?.[1]?.id;
+    const priceListId = priceLists?.priceLists?.[0]?.id;
 
     console.info("Получаем каталог товаров")
     // Получаем каталог товаров
