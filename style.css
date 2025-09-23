@@ -113,7 +113,8 @@ html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Seg
     color: #000;
     
     @media (max-width: 800px) {
-        max-width: calc(50% - 32px);
+        width: calc(50% - 16px);
+        flex-grow: 1;
     }
 }
 .product-card img {
