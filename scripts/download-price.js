@@ -5,7 +5,7 @@ const url = 'https://online.sbis.ru/oauth/service/';
 const app_client_id = '4039125485564887';
 const app_secret = 'UFEA51TUJLT6QQ8D8MDIQDEN';
 const secret_key = '0C0VliyzZxZLxmIjJsnrbya8gxFyhXqnasqqI2mC5TvEHCbBtQwesZ6DwsQeHnnbqGoMTXviy80w7wOVWElkFuphRQqphon7oHMY2BiUKEt6jdATtskfVN';
-const actual_date = '20.09.2035';
+const actual_date = '20.09.2025';
 
 const downloadPrice = async () => {
     console.info("Подключаемся к серверу СБИС")
@@ -69,7 +69,7 @@ const downloadPrice = async () => {
     const catalogParams = new URLSearchParams({
         pointId,
         priceListId,
-        pageSize: 300,
+        pageSize: 500,
     })
 
     const catalogResult = await fetch('https://api.sbis.ru/retail/nomenclature/list?' + catalogParams, {
@@ -132,7 +132,7 @@ const downloadPrice = async () => {
 
 
         sections[hierarchicalParent].goods.push({
-            id, name, cost, unit, image: `./images/${id}.jpg`
+            id, name, cost, unit, image: image ? `./images/${id}.jpg` : ''
         })
     }
 
