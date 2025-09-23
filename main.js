@@ -4,7 +4,7 @@ const orderCategories = [1350, 1344, 1342, 1353, 1348, 1347, 1345, 1346, 1349, 1
 fetch('price.json')
     .then(res => res.json())
     .then(data => {
-        const nav = document.getElementById("navigation");
+        const navigation = document.getElementById("navigation");
         const container = document.getElementById("price");
 
         // Перебираем категории
@@ -16,7 +16,7 @@ fetch('price.json')
             categoryDiv.id = categoryId;
 
             // Добавляем ссылку на категорию в навигацию
-            nav.insertAdjacentHTML("beforeend", `
+            navigation.insertAdjacentHTML("beforeend", `
                 <a href="#${categoryId}">${category?.name}</a>
             `)
 
@@ -35,7 +35,7 @@ fetch('price.json')
               <div class="product-card">
                 <img src="${product.image || 'https://hds.hel.fi/images/foundation/visual-assets/placeholders/image-m@3x.png'}" alt="${product.name}">
                 <h3 class="product-title">${product.name}</h3>
-                <div class="price">${product?.cost ?? "Не указана"} ₽</div>
+                <div class="price">${product?.cost ?? "Не указана"} ₽ / ${product?.unit ?? ""}</div>
               </div>
             `);
             });

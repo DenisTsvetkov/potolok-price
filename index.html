@@ -9,8 +9,25 @@
     <title>Прайс-лист Потолок #1</title>
 </head>
 <body>
-    <nav id="navigation" class="navigation"></nav>
+    <div class="topbar">
+        <button class="burger" id="burger" aria-label="Открыть меню" aria-controls="sidebar" aria-expanded="false">
+            <span class="lines">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+        <div class="brand">Потолок#1 Прайс</div>
+    </div>
+    <div class="overlay" id="overlay" tabindex="-1" aria-hidden="true"></div>
+
+    <aside class="sidebar" id="sidebar" role="navigation" aria-label="Боковая навигация">
+        <nav class="nav" id="navigation" aria-label="Основные ссылки"></nav>
+    </aside>
+
+<!--    <nav id="navigation" class="navigation"></nav>-->
     <section id="price"></section>
-<script src="./main.js"></script>
+    <script src="./main.js"></script>
+    <script src="./navigation.js"></script>
 </body>
 </html>
