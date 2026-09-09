@@ -1,7 +1,7 @@
 const orderCategories = [1350, 1344, 1342, 1353, 1348, 1347, 1345, 1346, 1349, 1351, 1383, 1352, 1371, 1343, 1656]
 
 
-fetch('price.json')
+fetch('price.json', { cache: 'no-store' })
     .then(res => res.json())
     .then(data => {
         const navigation = document.getElementById("navigation");
