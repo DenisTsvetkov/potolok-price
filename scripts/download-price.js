@@ -5,7 +5,7 @@ const url = 'https://online.sbis.ru/oauth/service/';
 const app_client_id = '4039125485564887';
 const app_secret = 'UFEA51TUJLT6QQ8D8MDIQDEN';
 const secret_key = '0C0VliyzZxZLxmIjJsnrbya8gxFyhXqnasqqI2mC5TvEHCbBtQwesZ6DwsQeHnnbqGoMTXviy80w7wOVWElkFuphRQqphon7oHMY2BiUKEt6jdATtskfVN';
-const actual_date = '09.09.2026';
+const actual_date = '09.09.26';
 
 const downloadPrice = async () => {
     console.info("Подключаемся к серверу СБИС")
